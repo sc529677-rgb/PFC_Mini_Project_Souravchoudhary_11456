@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int password = 1234;   // fixed numeric password
+    int input;
+    int attempts = 3;
+    for (int i = 0; i < attempts; i++) {
+        printf("Enter password: ");
+        scanf("%d", &input);
+        if (input == password) {
+            printf("Access granted.\n");
+            break;
+        } else {
+            printf("Incorrect password.\n");
+        }
+    }
+    if (input != password) {
+        printf("Too many attempts. Account locked.\n");
+    }
+    return 0;
+}
+    /* OUTPUT */
+//Enter password: 23
+//Incorect password.
+//Enter password: 23
+//Incorect password.
+//Enter password: 23
+// Incorect password.
+//Too many attempts. Account locked.
